@@ -77,7 +77,7 @@ function Loginscreen () {
                 <input className='text-sm shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline' id='password' type='password' placeholder='Password' />
               </div>
               <div className='items-center justify-between'>
-                <button className='text-sm w-full bg-yellow-400 hover:bg-yellow-400/90 py-2 rounded focus:outline-none focus:shadow-outline' type='button'>
+                <button className='text-sm w-full bg-yellow-400 hover:bg-yellow-400/90 py-2 rounded focus:outline-none focus:shadow-outline' href="https://google.com" type='button'>
                   Sign In
                 </button>
               </div>

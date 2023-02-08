@@ -29,3 +29,29 @@
     border-radius: 10px;
     border: 3px none #ffffff;
   }
+
+  .contact-links {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+  }
+  
+  .contact-links a {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-links i {
+    margin-right: 2px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contact-details {
+    transition: transform 0.3s ease-out;
+  }
+  
+  .contact-details:hover {
+    transform: translateY(-1px);
+  }

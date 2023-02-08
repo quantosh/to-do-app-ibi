@@ -45,7 +45,7 @@ function Loginscreen () {
   }
 
   return (
-    <div className='flex items-center justify-center h-screen w-screen bg-white'>
+    <div className='flex items-center justify-center m-auto'>
       <div className='bg-white shadow-md p-4 center rounded'>
         <div>
           <form className=''>

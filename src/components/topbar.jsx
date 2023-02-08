@@ -9,9 +9,9 @@ function Topbar () {
   }, [appState])
 
   return (
-    <div className='flex float-right p-3 gap-1'>
-      <div className='flex flex-col text-xs justify-center mr-2' />
-      <img className='mr-2 w-10 h-10 rounded-full' src='https://api.dicebear.com/5.x/initials/svg?seed=Abby' alt='user photo' />
+    <div className='flex float-right p-3'>
+      <div className='flex flex-col text-xs justify-center' />
+      <img className='w-10 h-10 rounded-full' src='https://api.dicebear.com/5.x/initials/svg?seed=IB' alt='user photo' />
     </div>
   )
 }

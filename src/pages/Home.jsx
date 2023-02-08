@@ -4,9 +4,9 @@ import Topbar from '../components/topbar'
 import Sidebar from '../components/sidebar'
 
 const style = {
-  mainContainer: 'text-black backdrop-blur-sm bg-white/40 border border-white/40 rounded-xl flex rounded shadow-xl w-full h-full',
-  topContainer: 'mb-1 float-right w-full mr-4',
-  sideContainer: 'block text-sm max-w-[240px]',
+  mainContainer: 'text-black backdrop-blur-sm bg-white/40 border border-white/40 rounded-xl flex rounded-x shadow-xl w-full h-full',
+  topContainer: 'mb-1 float-right w-full',
+  sideContainer: 'h-full shadow-xl',
   appContainer: '',
   contentContainer: 'block w-full'
 }

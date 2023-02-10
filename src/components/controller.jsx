@@ -16,9 +16,8 @@ import Spinner from './spinner'
 const style = {
   container: '',
   heading: 'text-2xl font-bold text-center mt-2 mb-2',
-  form: 'flex justify-between mt-2 ml-4 mr-4',
-  input: 'border p-3 w-full text-sm mt-4 backdrop-blur-sm bg-white/40 border border-white/40 rounded-md',
-  button: 'border p-2 ml-2 mt-4 mr-4 backdrop-blur-sm bg-white/40 border border-white/40 rounded-md',
+  form: 'flex justify-between ml-2 mb-2 p-2 ',
+  input: 'border p-3 w-full text-sm backdrop-blur-sm rounded-md mr-2',
   count: 'text-center text-xs p-2'
 }
 
@@ -97,15 +96,13 @@ function Controller () {
                   onChange={(e) => setInput(e.target.value)}
                   className={style.input}
                   type='text'
-                  placeholder='Add Task'
+                  placeholder='Write something'
                 />
                 )
           }
-          <button className={style.button}>
-            <AiOutlinePlus size={20} />
-          </button>
+          <button class="text-white text-sm bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded text-sm px-5 text-center">Add task</button>
         </form>
-        <ul className=' overflow-y-auto h-[63vh] '>
+        <ul className=' overflow-y-auto'>
           {todos.map((todo, index) => (
             <Todo
               key={index}

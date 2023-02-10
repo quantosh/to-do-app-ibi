@@ -29,7 +29,7 @@ const Todo = ({ todo, toggleComplete, deleteTodo, key, editText, colorChooser })
   }
 
   return (
-    <li key={key} className={todo?.completed ? 'flex text-sm justify-between p-2 mb-2 mt-2 ml-4 mr-4 bg-red-300/40 rounded-md backdrop-blur-sm' : 'flex text-sm justify-between p-2 mb-2 mt-2 ml-4 mr-4 bg-[#FFFFFF]/40 shadow-xl hover:bg-[#F5F5F5]/80 rounded-md backdrop-blur-sm'}>
+    <li key={key} className={todo?.completed ? 'flex text-sm justify-between p-2 mb-2 mt-2 ml-4 mr-4 bg-red-400 rounded-md border' : 'flex text-sm justify-between p-2 mb-2 mt-2 ml-4 mr-4 shadow-xl rounded-md bg-white-300 border'}>
       <div className='flex justify-center items-center'>
         <input onChange={() => toggleComplete(todo)} type='checkbox' className='ml-2' checked={todo?.completed ? 'checked' : ''} />
         {!toggleEdit

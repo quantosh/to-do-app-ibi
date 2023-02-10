@@ -3,15 +3,20 @@ import Controller from './components/controller'
 import Home from './pages/Home'
 import Loginscreen from './pages/LoginScreen'
 import { AppProvider } from './Context/AppProvider'
+import NotFoundPage from './pages/NotFoundPage'
+import Notfound from './components/notfound'
 
 function App () {
   return (
-    <div className='p-10 w-screen h-screen bg-[url("https://grepitout.com/wp-content/uploads/2017/10/Mountain.jpg")] bg-cover'>
+    <div className='w-screen h-screen bg-[url("https://grepitout.com/wp-content/uploads/2017/10/Mountain.jpg")] bg-cover'>
       <AppProvider>
         <Routes>
           <Route path='/' element={<Loginscreen />} />
           <Route element={<Home />}>
             <Route path='/Home' element={<Controller />} />
+          </Route>
+          <Route element={<NotFoundPage />}>
+            <Route path='*' element={<Home />} />
           </Route>
         </Routes>
       </AppProvider>

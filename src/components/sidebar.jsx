@@ -19,7 +19,7 @@ const Sidebar = () => {
       </button>
       <aside id="cta-button-sidebar" class="block top-0 left-0 z-40 w-64 transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
         <div class="h-full px-3">
-          <a href='' class='flex items-center mb-8 justify-center'>
+          <a href='' class='flex items-center mb-4 justify-center'>
             <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Android_O_Preview_Logo.png/1024px-Android_O_Preview_Logo.png' class='h-6 mr-3 sm:h-9' alt='Flowbite Logo' />
             <span class='self-center text-l font-semibold whitespace-nowrap'>To Do App</span>
           </a>
@@ -34,7 +34,7 @@ const Sidebar = () => {
               <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
                 <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-black  transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
                 <span class="flex-1 ml-3 whitespace-nowrap">Important</span>
-                <span class="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300"></span>
+                <span class="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full"></span>
               </a>
             </li>
             <li>
@@ -57,9 +57,9 @@ const Sidebar = () => {
               </a>
             </li>
           </ul>
-          <div id="dropdown-cta" class="p-4 mt-6 rounded-lg backdrop-blur-sm bg-white/40 border border-white/40 rounded-xl shadow-xl" role="alert">
+          <div id="dropdown-cta" class="p-4 mt-6 rounded-lg backdrop-blur-sm bg-yellow-400 border border-white/40 rounded-xl shadow-xl" role="alert">
             <div class="flex items-center mb-3">
-              <span class="bg-red-300 text-black text-sm font-semibold mr-2 px-2.5 py-0.5 rounded">Beta</span>
+              <span class="bg-white text-black text-sm font-semibold mr-2 px-2.5 py-0.5 rounded">Beta</span>
               <button type="button" class="ml-auto -mx-1.5 -my-1.5 rounded-lg focus:ring-2 focus:ring-blue-400 p-1 hover:bg-blue-200 inline-flex h-6 w-6" data-dismiss-target="#dropdown-cta" aria-label="Close">
                 <span class="sr-only">Close</span>
                 <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Loginmsg = () => {
   return (
-    <div class='max-w-sm p-3 text-black backdrop-blur-sm bg-white/40 border border-white/40 rounded-xl shadow-xl'>
+    <div class='max-w-sm m-8 p-3 text-black backdrop-blur-sm bg-white/40 border border-white/40 rounded-xl shadow-xl'>
       <a href='#'>
         <h5 class='mb-2 text-xl font-bold tracking-tight dark:text-white'>
           Login is in development

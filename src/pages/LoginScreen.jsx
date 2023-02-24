@@ -4,6 +4,7 @@ import 'firebaseui/dist/firebaseui.css'
 import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 import { AppContext } from '../Context/AppProvider'
 import Loginmsg from '../components/loginmsg'
+import Toast from '../components/toast/toast'
 
 function Loginscreen () {
   const { setUserData } = useContext(AppContext)
@@ -54,6 +55,7 @@ function Loginscreen () {
     <div>
       <div className='p-4'>
         <Loginmsg />
+        <Toast />
       </div>
       <div className={style.mainContainer}>
         <div className={style.loginContainer}>

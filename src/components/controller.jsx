@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { AiOutlinePlus } from 'react-icons/ai'
 import Todo from './todo'
 import { db } from '../services/firebase'
 import {
@@ -100,7 +99,7 @@ function Controller () {
                 />
                 )
           }
-          <button class="text-white text-sm bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded text-sm px-5 text-center">Add task</button>
+          <button class='text-white text-sm bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded px-5 text-center'>Add task</button>
         </form>
         <ul className=' overflow-y-auto'>
           {todos.map((todo, index) => (

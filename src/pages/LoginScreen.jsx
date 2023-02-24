@@ -5,7 +5,7 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 import { AppContext } from '../Context/AppProvider'
 import Loginmsg from '../components/loginmsg'
 
-function Loginscreen() {
+function Loginscreen () {
   const { setUserData } = useContext(AppContext)
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(false)
@@ -46,13 +46,15 @@ function Loginscreen() {
   }
 
   const style = {
-    mainContainer: 'flex p-2 w-full h-full items-center justify-center content-center center ',
+    mainContainer: 'flex w-full h-full items-center justify-center content-center center ',
     loginContainer: ''
   }
 
   return (
     <div>
-      <Loginmsg />
+      <div className='p-4'>
+        <Loginmsg />
+      </div>
       <div className={style.mainContainer}>
         <div className={style.loginContainer}>
           <div className='p-4 center text-black backdrop-blur-sm bg-white/40 border border-white/40 rounded-xl shadow-xl'>
@@ -80,7 +82,7 @@ function Loginscreen() {
                   <input className='text-sm shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline' id='password' type='password' placeholder='Password' />
                 </div>
                 <div className='items-center justify-between'>
-                  <button className='text-sm w-full bg-yellow-400 hover:bg-yellow-400/90 py-2 rounded focus:outline-none focus:shadow-outline' href="https://google.com" type='button'>
+                  <button className='text-sm w-full bg-yellow-400 hover:bg-yellow-400/90 py-2 rounded focus:outline-none focus:shadow-outline' href='https://google.com' type='button'>
                     Sign In
                   </button>
                 </div>
@@ -96,7 +98,7 @@ function Loginscreen() {
             </a>
           </div>
           <div>
-            {/* 
+            {/*
         <div className='mt-2 text-xs text-white shadow drop-shadow-xl text-center'>
           Coded by <a href="">Ismael Barea Insua</a>
           <div class="contact-links">

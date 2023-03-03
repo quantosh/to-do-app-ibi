@@ -4,7 +4,6 @@ import Home from './pages/Home'
 import Loginscreen from './pages/LoginScreen'
 import { AppProvider } from './Context/AppProvider'
 import NotFoundPage from './pages/NotFoundPage'
-import Notfound from './components/notfound'
 
 function App () {
   return (

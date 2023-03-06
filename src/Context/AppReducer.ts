@@ -1,7 +1,9 @@
 export const initialState = {
   userData:{
+    uid: '',
     displayName: '',
     email: '',
+    photoURL: '',
     emailVerified: false,
   }
 };

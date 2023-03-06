@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import Todo from './todo'
 import { db } from '../services/firebase'
 import {
@@ -7,10 +7,13 @@ import {
   onSnapshot,
   updateDoc,
   doc,
+  orderBy,
   addDoc,
-  deleteDoc
+  deleteDoc,
+  serverTimestamp
 } from 'firebase/firestore'
 import Spinner from './spinner'
+import { AppContext } from '../Context/AppProvider'
 
 const style = {
   container: '',
@@ -24,6 +27,8 @@ function Controller () {
   const [todos, setTodos] = useState([])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
+  const { appState } = useContext(AppContext)
+  const { uid } = appState?.userData
 
   // Create todo
   const createTodo = async (e) => {
@@ -33,9 +38,10 @@ function Controller () {
       return
     }
     setLoading(true)
-    await addDoc(collection(db, 'todos'), {
+    await addDoc(collection(db, `${uid}/todos/todoList`), {
       text: input,
-      completed: false
+      completed: false,
+      timestamp: serverTimestamp()
     })
     setLoading(false)
     setInput('')
@@ -43,7 +49,8 @@ function Controller () {
 
   // Read todo from firebase
   useEffect(() => {
-    const q = query(collection(db, 'todos'))
+    if (!uid) return
+    const q = query(collection(db, `${uid}/todos/todoList`), orderBy('timestamp', 'desc'))
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       const todosArr = []
       querySnapshot.forEach((doc) => {
@@ -53,29 +60,29 @@ function Controller () {
       setTodos(todosArr)
     })
     return () => unsubscribe()
-  }, [])
+  }, [uid])
 
   // Update todo in firebase
   const toggleComplete = async (todo) => {
-    await updateDoc(doc(db, 'todos', todo.id), {
+    await updateDoc(doc(db, `${uid}/todos/todoList`, todo.id), {
       completed: !todo.completed
     })
   }
 
   const editText = async (todo) => {
-    await updateDoc(doc(db, 'todos', todo.id), {
+    await updateDoc(doc(db, `${uid}/todos/todoList`, todo.id), {
       text: todo.text
     })
   }
 
   // Delete todo
   const deleteTodo = async (id) => {
-    await deleteDoc(doc(db, 'todos', id))
+    await deleteDoc(doc(db, `${uid}/todos/todoList`, id))
   }
 
   // Color Chooser
   const colorChooser = async (todo) => {
-    await updateDoc(doc(db, 'todos', todo.id), {
+    await updateDoc(doc(db, `${uid}/todos/todoList`, todo.id), {
       color: todo.color
     })
   }
@@ -99,7 +106,7 @@ function Controller () {
                 />
                 )
           }
-          <button class='text-white text-sm bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded px-5 text-center'>Add task</button>
+          <button className='text-white text-sm bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded px-5 text-center'>Add task</button>
         </form>
         <ul className=' overflow-y-auto'>
           {todos.map((todo, index) => (

@@ -1,5 +1,5 @@
 import GoogleButton from 'react-google-button'
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useContext } from 'react'
 import 'firebaseui/dist/firebaseui.css'
 import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 import { AppContext } from '../Context/AppProvider'
@@ -7,42 +7,29 @@ import Loginmsg from '../components/loginmsg'
 
 function Loginscreen () {
   const { setUserData } = useContext(AppContext)
-  const [error, setError] = useState(null)
-  const [loading, setLoading] = useState(false)
   const provider = new GoogleAuthProvider()
   const auth = getAuth()
 
-  useEffect(() => {
-    auth.onAuthStateChanged((user) => {
-      if (user) {
-        // Redirect to main page
-        // ...
-      }
-    })
-    console.log(error, loading)
-  }, [auth])
-
   const handleLogin = () => {
-    setLoading(true)
     signInWithPopup(auth, provider)
       .then((result) => {
         // The signed-in user info.
         // eslint-disable-next-line no-unused-vars
         const user = result.user
-        const { displayName, email, photoURL, emailVerified } = user
+        const { displayName, email, photoURL, emailVerified, uid } = user
         setUserData({
+          uid,
           displayName,
           email,
           photoURL,
           emailVerified
         })
-        console.log(user)
         // ...
       })
       .catch((error) => {
         // Handle Errors here.
-        setError(error.message)
-        setLoading(false)
+        console.log(error)
+        window.location.reload()
       })
   }
 
@@ -60,9 +47,9 @@ function Loginscreen () {
             <div>
               <form className=''>
                 <div className='mb-3 text-center'>
-                  <a href='' class='flex items-center justify-center'>
-                    <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Android_O_Preview_Logo.png/1024px-Android_O_Preview_Logo.png' class='h-6 mr-2 sm:h-10' alt='To do app - Logo' />
-                    <span class='self-center text-l font-semibold whitespace-nowrap'>To Do App</span>
+                  <a href='' className='flex items-center justify-center'>
+                    <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Android_O_Preview_Logo.png/1024px-Android_O_Preview_Logo.png' className='h-6 mr-2 sm:h-10' alt='To do app - Logo' />
+                    <span className='self-center text-l font-semibold whitespace-nowrap'>To Do App</span>
                   </a>
                 </div>
                 <div className='mb-4'>
@@ -96,23 +83,7 @@ function Loginscreen () {
               Forgot Password?
             </a>
           </div>
-          <div>
-            {/*
-        <div className='mt-2 text-xs text-white shadow drop-shadow-xl text-center'>
-          Coded by <a href="">Ismael Barea Insua</a>
-          <div class="contact-links">
-            <a id="profile-link" href="https://github.com/quantosh" target="_blank" class="btn contact-details">
-              <i class="fab fa-github"></i>GitHub</a>
-            <a href="mailto:ismaeldawsemi@gmail.com" class="btn contact-details">
-              <i class="fas fa-at"></i>Email</a>
-            <a href="https://www.linkedin.com/in/ismaelbareainsua/" class="btn contact-details">
-              <i class="fa-brands fa-linkedin-in"></i>Linkedin</a>
-            <a href="https://www.facebook.com/ismaelbareainsua" target="_blank" class="btn contact-details">
-              <i class="fa-brands fa-facebook-f"></i>Facebook</a>
-          </div>
-        </div>
-        */}
-          </div>
+          <div />
         </div>
       </div>
     </div>

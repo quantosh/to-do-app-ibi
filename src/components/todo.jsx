@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Palette from './palette'
 import PaletteButton from './palettebutton.jsx'
 
-const Todo = ({ todo, toggleComplete, deleteTodo, key, editText, colorChooser }) => {
+const Todo = ({ todo, toggleComplete, deleteTodo, editText, colorChooser }) => {
   const [showPalette, setShowPalette] = useState(false)
   const [toggleEdit, setToggleEdit] = useState(false)
   const [input, setInput] = useState(todo.text)
@@ -29,7 +29,7 @@ const Todo = ({ todo, toggleComplete, deleteTodo, key, editText, colorChooser })
   }
 
   return (
-    <li key={key} className={todo?.completed ? 'flex text-sm justify-between p-2 mb-2 mt-2 ml-4 mr-4 bg-red-400 rounded-md border' : 'flex text-sm justify-between p-2 mb-2 mt-2 ml-4 mr-4 shadow-xl rounded-md bg-white-300 border'}>
+    <li className={todo?.completed ? 'flex text-sm justify-between p-2 mb-2 mt-2 ml-4 mr-4 bg-red-400 rounded-md border' : 'flex text-sm justify-between p-2 mb-2 mt-2 ml-4 mr-4 shadow-xl rounded-md bg-white-300 border'}>
       <div className='flex justify-center items-center'>
         <input onChange={() => toggleComplete(todo)} type='checkbox' className='ml-2' checked={todo?.completed ? 'checked' : ''} />
         {!toggleEdit

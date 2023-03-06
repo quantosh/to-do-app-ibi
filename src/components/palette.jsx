@@ -33,13 +33,11 @@ export default function Palette ({ showPalette, handleShowPalette, colorChooser,
   const elementRef = useRef(null)
   const [color, setColor] = useState(todo.color)
   const handleColorChange = (color) => {
-    console.log('handleColorChange: ', color)
     setColor(color)
   }
 
   // Efecto que se ejecuta siempre cuando se renderiza el componente
   useEffect(() => {
-    console.log('useEffect: ', color)
     if (color !== todo.color) {
       const newTodo = {
         ...todo,

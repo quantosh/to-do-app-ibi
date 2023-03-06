@@ -1,7 +1,6 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Topbar from '../components/topbar'
-import Sidebar from '../components/sidebar'
 import Footer from '../components/footer'
 
 const style = {
@@ -17,9 +16,6 @@ const Home = () => {
   return (
     <>
       <div className={style.mainContainer}>
-        <div className={style.sideContainer}>
-          <Sidebar />
-        </div>
         <div className={style.contentContainer}>
           <div className={style.topContainer}>
             <Topbar />

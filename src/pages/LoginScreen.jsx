@@ -3,7 +3,6 @@ import React, { useContext } from 'react'
 import 'firebaseui/dist/firebaseui.css'
 import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 import { AppContext } from '../Context/AppProvider'
-import Loginmsg from '../components/loginmsg'
 
 function Loginscreen () {
   const { setUserData } = useContext(AppContext)

@@ -19,7 +19,7 @@ Esta es una aplicación simple de tareas creada con React y Firebase. Permite a 
 ![Visual Studio Code](https://img.shields.io/static/v1?style=for-the-badge&message=Visual+Studio+Code&color=007ACC&logo=Visual+Studio+Code&logoColor=FFFFFF&label=)
 ![Trello](https://img.shields.io/static/v1?style=for-the-badge&message=Trello&color=0079BF&logo=Trello&logoColor=FFFFFF&label=)
 
-My trello board here 🙂 [Board](https://trello.com/b/K7IETmRy/to-do-app)
+My trello board [here](https://trello.com/b/K7IETmRy/to-do-app) 🙂 
 
 #### 📋 Notes
 I will update this project, since I made some changes.

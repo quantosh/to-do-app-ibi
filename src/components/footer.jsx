@@ -6,7 +6,7 @@ const Footer = () => {
       <div className='text-center'>
         <span className='text-xs'>© 2023 Task Manager</span>
       </div>
-      <ul className='flex flex-nowrap items-center text-sm  mt-1 text-xs'>
+      <ul className='flex flex-nowrap mt-4 text-xs justify-center align-middle items-center'>
         <li>
           <i className='fa-brands fa-linkedin-in' />
           <a

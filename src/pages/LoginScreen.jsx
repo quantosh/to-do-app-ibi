@@ -39,7 +39,6 @@ function Loginscreen () {
 
   return (
     <div>
-
       <div className={style.mainContainer}>
         <div className={style.loginContainer}>
           <div className='p-4 center text-black backdrop-blur-sm bg-white/40 border border-white/40 rounded-xl shadow-xl'>

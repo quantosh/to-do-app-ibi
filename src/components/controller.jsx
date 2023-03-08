@@ -108,7 +108,7 @@ function Controller () {
           }
           <button className='text-white text-sm bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded px-5 text-center'>Add task</button>
         </form>
-        <ul className=' overflow-y-auto'>
+        <ul className='h-[85vh] overflow-y-auto'>
           {todos.map((todo, index) => (
             <Todo
               key={index}

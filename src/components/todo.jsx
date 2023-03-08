@@ -28,13 +28,21 @@ const Todo = ({ todo, toggleComplete, deleteTodo, editText, colorChooser }) => {
     setToggleEdit(false)
   }
 
+  const handleTextColor = () => {
+    const options = ['bg-slate-900', 'bg-slate-700', 'bg-slate-500', 'bg-slate-400', 'bg-slate-300', 'bg-purple-700', 'bg-sky-900']
+    if (options.includes(todo.color)) return 'text-white'
+    return 'text-black'
+  }
+
   return (
-    <li className={todo?.completed ? 'flex text-sm justify-between p-2 mb-2 mt-2 ml-4 mr-4 bg-red-400 rounded-md border' : 'flex text-sm justify-between p-2 mb-2 mt-2 ml-4 mr-4 shadow-xl rounded-md bg-white-300 border'}>
+    <li className={todo?.completed ? 'flex text-sm justify-between p-2 mb-2 mt-2 ml-4 mr-4 bg-red-400 rounded-md border' : `flex text-sm justify-between p-2 mb-2 mt-2 ml-4 mr-4 rounded-md ${todo.color} border`}>
       <div className='flex justify-center items-center'>
         <input onChange={() => toggleComplete(todo)} type='checkbox' className='ml-2' checked={todo?.completed ? 'checked' : ''} />
         {!toggleEdit
           ? (
-            <p onClick={handleToggleEdit} className={todo?.completed ? 'ml-4 cursor-pointer line-through' : 'ml-4 cursor-pointer'}>
+            <p
+              onClick={handleToggleEdit} className={todo?.completed ? 'ml-4 cursor-pointer line-through' : `${handleTextColor()} ml-4 cursor-pointer`}
+            >
               {todo.text}
             </p>
             )

@@ -80,7 +80,7 @@ export default function Palette ({ showPalette, handleShowPalette, colorChooser,
   if (!showPalette) return null
   return (
     <div ref={elementRef} tabIndex={0} onBlur={handleBlur} className='flex items-center justify-center absolute top-4 right-5'>
-      <div className='block backdrop-blur-sm bg-white/40 border border-white/40 shadow-md center rounded-l-xl rounded-b-xl p-2'>
+      <div className='block backdrop-blur-sm bg-white border border-white/40 shadow-md center rounded-l-xl rounded-b-xl p-2'>
         <h2 className='text-xs text-center mb-2 mt-1 text-gray-600'>Color Palette</h2>
         {
           paletteConfig.map((colorArray, index) => {

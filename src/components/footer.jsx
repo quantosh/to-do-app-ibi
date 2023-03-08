@@ -2,18 +2,17 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='w-full md:items-center md:justify-between md:p-6'>
+    <footer className='w-full md:items-center md:justify-end mt-4 justify-center'>
       <div className='text-center'>
-        <span className='text-sm'>© 2023 Task Manager</span>
+        <span className='text-xs'>© 2023 Task Manager</span>
       </div>
-      <ul className='flex flex-wrap items-center text-sm align-center mt-1 justify-around'>
+      <ul className='flex flex-nowrap items-center text-sm  mt-1 text-xs'>
         <li>
           <i className='fa-brands fa-linkedin-in' />
           <a
             href='https://www.linkedin.com/in/ismaelbareainsua'
             className='mr-4 hover:underline md:mr-6 ml-1'
           >
-
             Linkedin
           </a>
         </li>

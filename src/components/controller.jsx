@@ -17,9 +17,9 @@ import { AppContext } from '../Context/AppProvider'
 
 const style = {
   container: '',
-  heading: 'text-2xl font-bold text-center mt-2 mb-2',
-  form: 'flex justify-between ml-2 mb-2 p-2 ',
-  input: 'border p-3 w-full text-sm backdrop-blur-sm rounded-md mr-2',
+  heading: 'text-2xl font-bold text-center mt-2',
+  form: 'flex justify-between ml-2 p-2',
+  input: 'border p-3 w-full text-sm backdrop-blur-sm rounded-md mr-2 ',
   count: 'text-center text-xs p-2'
 }
 
@@ -106,7 +106,7 @@ function Controller () {
                 />
                 )
           }
-          <button className='text-white text-sm bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded px-5 text-center'>Add task</button>
+          <button className='mr-2 text-white text-sm bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded px-5 text-center'>Add task</button>
         </form>
         <ul className='h-[85vh] overflow-y-auto'>
           {todos.map((todo, index) => (

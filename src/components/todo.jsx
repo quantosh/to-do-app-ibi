@@ -35,7 +35,7 @@ const Todo = ({ todo, toggleComplete, deleteTodo, editText, colorChooser }) => {
   }
 
   return (
-    <li className={todo?.completed ? 'flex text-sm justify-between p-2 mb-2 mt-2 ml-4 mr-4 bg-red-400 rounded-md border' : `flex text-sm justify-between p-2 mb-2 mt-2 ml-4 mr-4 rounded-md ${todo.color} border`}>
+    <li className={todo?.completed ? 'flex text-sm justify-between p-2 mb-2 mt-2 ml-4 mr-4 bg-red-400 rounded-md border' : `flex text-sm justify-between p-2 mb-2 mt-2 ml-4 mr-4 rounded-md ${todo.color} border dark:text-[#DCDCDD] dark:border-black`}>
       <div className='flex justify-center items-center'>
         <input onChange={() => toggleComplete(todo)} type='checkbox' className='ml-2' checked={todo?.completed ? 'checked' : ''} />
         {!toggleEdit

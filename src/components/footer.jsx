@@ -2,11 +2,11 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='w-full md:items-center md:justify-end mt-4 justify-center'>
+    <footer className='w-full md:items-center md:justify-end mt-3 justify-center'>
       <div className='text-center'>
         <span className='text-xs'>© 2023 Task Manager</span>
       </div>
-      <ul className='flex flex-nowrap mt-4 text-xs justify-center align-middle items-center'>
+      <ul className='flex flex-nowrap mt-3 text-xs justify-center align-middle items-center'>
         <li>
           <i className='fa-brands fa-linkedin-in' />
           <a

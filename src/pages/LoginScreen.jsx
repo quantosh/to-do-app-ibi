@@ -33,7 +33,7 @@ function Loginscreen () {
   }
 
   const style = {
-    mainContainer: 'flex p-2 w-full h-full items-center justify-center content-center center ',
+    mainContainer: 'flex p-2 w-full h-full items-center justify-center content-center',
     loginContainer: ''
   }
 
@@ -41,7 +41,7 @@ function Loginscreen () {
     <div>
       <div className={style.mainContainer}>
         <div className={style.loginContainer}>
-          <div className='p-4 center text-black backdrop-blur-sm bg-white/40 border border-white/40 rounded-xl shadow-xl'>
+          <div className='p-4 center text-black bg-white border border-white rounded-xl shadow-xl'>
             <div>
               <form className=''>
                 <div className='mb-3 text-center'>

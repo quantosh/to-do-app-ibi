@@ -73,10 +73,12 @@ const Sidebar = () => {
                 <svg aria-hidden='true' className='w-4 h-4' fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path fillRule='evenodd' d='M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z' clipRule='evenodd' /></svg>
               </button>
             </div>
-            <p className='mb-1 text-xs'>
-              Preview the beta of my task manager! You can use all the basic crud operations and the new color chooser! ❤
-            </p>
-            <a className='text-sm underline hover:text-yellow-500 text-xs' href='mailto:ismaeldawsemi@gmail.com'>Send me a mail</a>
+            <div className='flex-colum justify-center items-center'>
+              <p className='mb-1 text-xs'>
+                Preview the beta of my task manager! You can use all the basic crud operations and the new color chooser! ❤
+              </p>
+              <a className='text-xs hover:text-white text-xs' href='mailto:ismaeldawsemi@gmail.com'><i className='fa fa-envelope' /> Send me a mail</a>
+            </div>
           </div>
         </div>
         <Footer />

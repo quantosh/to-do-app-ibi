@@ -65,7 +65,7 @@ const Sidebar = () => {
               </button>
             </li>
           </ul>
-          <div id='dropdown-cta' className='p-4 mt-6 rounded-lg backdrop-blur-sm bg-yellow-400 border border-white/40 shadow-xl' role='alert'>
+          <div id='dropdown-cta' className='p-3 mt-6 rounded-lg backdrop-blur-sm bg-yellow-400 border border-white/40 shadow-xl' role='alert'>
             <div className='flex items-center mb-3'>
               <span className='bg-white text-black text-sm font-semibold mr-2 px-2.5 py-0.5 rounded text-xs'>Beta</span>
               <button type='button' className='ml-auto -mx-1.5 -my-1.5 rounded-lg focus:ring-2 focus:ring-blue-400 p-1 hover:bg-blue-200 inline-flex h-6 w-6' data-dismiss-target='#dropdown-cta' aria-label='Close'>
@@ -73,7 +73,7 @@ const Sidebar = () => {
                 <svg aria-hidden='true' className='w-4 h-4' fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path fillRule='evenodd' d='M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z' clipRule='evenodd' /></svg>
               </button>
             </div>
-            <p className='mb-3 text-xs'>
+            <p className='mb-1 text-xs'>
               Preview the beta of my task manager! You can use all the basic crud operations and the new color chooser! ❤
             </p>
             <a className='text-sm underline hover:text-yellow-500 text-xs' href='mailto:ismaeldawsemi@gmail.com'>Send me a mail</a>
